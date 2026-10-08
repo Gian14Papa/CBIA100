@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gian Papa | CBIA100 Showcase Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #01140e;
+            color: #ecfdf5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(5, 150, 105, 0.08) 0%, transparent 50%);
+        }
+
+        /* NAVBAR */
+        header {
+            background: rgba(1, 20, 14, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .college-tag {
+            border-left: 3px solid #10b981;
+            padding-left: 12px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .college-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+
+        .college-sub {
+            font-size: 10px;
+            font-weight: 700;
+            color: #34d399;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #a7f3d0;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 8px 18px;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 100px 8% 80px;
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+            gap: 40px;
+            align-items: center;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #34d399;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10b981;
+        }
+
+        .hero-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 58px;
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 20px;
+            color: #ffffff;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .hero-title span {
+            color: #10b981;
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 600px;
+        }
+
+        .btn-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #10b981;
+            color: #01140e;
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 16px 36px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-hero:hover {
+            background: #34d399;
+            box-shadow: 0 0 35px rgba(52, 211, 153, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .hero-panel {
+            background: #022319;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 36px;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .hero-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #10b981, transparent);
+        }
+
+        .hero-panel h4 {
+            font-family: 'Syne', sans-serif;
+            color: #34d399;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .hero-panel p {
+            color: #a7f3d0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* PROJECTS BENTO GRID (2 CARDS) */
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 90px 24px 110px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+            padding-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: #34d399;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .bento-card {
+            background: #022319;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .bento-card:hover {
+            border-color: #10b981;
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.15);
+        }
+
+        .card-preview {
+            height: 240px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .img-marketplace {
+            background-image: linear-gradient(180deg, rgba(1, 20, 14, 0.2) 0%, rgba(2, 35, 25, 0.95) 100%), 
+                              url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80');
+        }
+
+        .img-portfolio {
+            background-image: linear-gradient(180deg, rgba(1, 20, 14, 0.2) 0%, rgba(2, 35, 25, 0.95) 100%), 
+                              url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80');
+        }
+
+        .card-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-family: 'Syne', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: rgba(16, 185, 129, 0.4);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            background: rgba(1, 20, 14, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .card-body {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: space-between;
+        }
+
+        .card-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: #34d399;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .btn-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #6ee7b7;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 14px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-card:hover {
+            background: #10b981;
+            color: #01140e;
+            border-color: #10b981;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+        }
+
+        /* ABOUT SECTION */
+        .about-section {
+            background: #022319;
+            border-top: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 70px 8%;
+        }
+
+        .about-container {
+            max-width: 800px;
+        }
+
+        .about-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .about-text {
+            font-size: 14px;
+            color: #a7f3d0;
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #01140e;
+            color: #6ee7b7;
+            text-align: center;
+            padding: 30px 24px;
+            font-size: 12px;
+            border-top: 1px solid rgba(16, 185, 129, 0.15);
+            letter-spacing: 0.5px;
+        }
+
+        footer strong {
+            color: #ffffff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 850px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 60px 6%;
+            }
+
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="brand-logo">
+            <div class="college-tag">
+                <span class="college-title">E.T. YUCHENGCO</span>
+                <span class="college-sub">College of Business</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#projects">Work</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>System: Active &bull; CBIA100</span>
+            </div>
+            <h1 class="hero-title">Gian Papa <span>Showcase</span></h1>
+            <p class="hero-subtitle">An interactive web repository featuring coursework in business marketplace design, structured HTML5 architecture, and custom CSS engineering.</p>
+            <a href="#projects" class="btn-hero">
+                <span>View Projects</span>
+                <span>&rarr;</span>
+            </a>
+        </div>
+
+        <div class="hero-panel">
+            <h4>Course Portfolio</h4>
+            <p>Developed for CBIA100 at Mapúa Malayan Colleges Laguna. Featuring Gian Papa's official Marketplace e-commerce layout and personal E-Portfolio page.</p>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION (2 CARDS) -->
+    <div class="projects-container" id="projects">
+        <div class="section-header">
+            <h2 class="section-title">Selected Projects</h2>
+            <span class="section-subtitle">[ 02 Completed Modules ]</span>
+        </div>
+
+        <div class="bento-grid">
+
+            <!-- MARKETPLACE CARD -->
+            <div class="bento-card">
+                <div class="card-preview img-marketplace">
+                    <div class="card-number">01</div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <p class="card-tag">// E-COMMERCE &amp; MARKETPLACE</p>
+                        <h3 class="card-title">Marketplace Page</h3>
+                        <p class="card-text">A styled commercial marketplace page displaying product offerings, dynamic layouts, and customized brand elements.</p>
+                    </div>
+                    <a href="./Gian%20Papa%20Marketplace/index.html" class="btn-card">
+                        <span>Launch Project</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- E-PORTFOLIO CARD -->
+            <div class="bento-card">
+                <div class="card-preview img-portfolio">
+                    <div class="card-number">02</div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <p class="card-tag">// RESUME &amp; ACADEMICS</p>
+                        <h3 class="card-title">E-Portfolio Page</h3>
+                        <p class="card-text">An interactive personal profile detailing student credentials, technical proficiencies, and course accomplishments.</p>
+                    </div>
+                    <a href="./Gian%20Eportfolio/index.html" class="btn-card">
+                        <span>Launch Project</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <h3 class="about-title">About This Compilation</h3>
+            <p class="about-text">
+                This website serves as the central directory for my CBIA100 web design modules at Mapúa Malayan Colleges Laguna. Each project demonstrates core principles of modern web construction, semantic coding structure, and visual hierarchy.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>Gian Papa</strong> &bull; CBIA100 &bull; Academic Year 2025–2026</p>
+        <p>E.T. Yuchengco College of Business &bull; Mapúa Malayan Colleges Laguna</p>
+    </footer>
+
+</body>
+</html>
