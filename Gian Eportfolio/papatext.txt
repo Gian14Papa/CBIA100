@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gian Papa - E-Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Main Container Card (White Center Content) -->
+    <div class="main-wrapper">
+
+        <!-- Header Section -->
+        <header>
+            <div class="header-container">
+                <h1>EPORTFOLIO</h1>
+                <p><b>Gian Papa | Marketing Student</b></p>
+                <nav class="nav-links">
+                    <a href="#home">Home</a> | 
+                    <a href="#about">About Me</a> | 
+                    <a href="#skills">Skills</a> | 
+                    <a href="#activities">Activities</a> | 
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Homepage Section -->
+            <section id="home" class="section-container">
+                <center>
+                    <img src="gian pic.jpg" alt="Gian Papa Photo" class="profile-img-small">
+                    <h2>Welcome to My E-Portfolio</h2>
+                    <p class="tagline"><i>"Aspiring Marketer Focused on Digital Growth and Strategy"</i></p>
+                </center>
+            </section>
+
+            <hr>
+
+            <!-- About Me Section -->
+            <section id="about" class="section-container">
+                <h2>About Me</h2>
+                <p><b>Bio:</b> Hello! I am <b>Gian Papa</b>, a dedicated student pursuing my passion in marketing and dynamic digital strategy.</p>
+                <p><b>Interests:</b> Marketing and Digital Marketing.</p>
+                <p><b>Career Goals:</b> To become a successful marketer leading impactful digital campaigns.</p>
+            </section>
+
+            <hr>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section-container">
+                <h2>Skills</h2>
+                <div class="skills-list">
+                    <h3>Core Competencies</h3>
+                    <ul>
+                        <li>Digital Marketing Strategy</li>
+                        <li>Social Media Management</li>
+                        <li>Market Research & Analysis</li>
+                        <li>Brand Promotion & Communication</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Activities & Events Section -->
+            <section id="activities" class="section-container">
+                <h2>Activities & Events</h2>
+                <div class="activities-text">
+                    <ul>
+                        <li><b>Marketing Events:</b> Participated in student marketing seminars, brand strategy workshops, and digital promotion events.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section-container">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out for marketing inquiries or collaborations!</p>
+                <p><b>Email:</b> <a href="mailto:Gmpapa0403@gmail.com">Gmpapa0403@gmail.com</a></p>
+
+                <form action="#" method="post">
+                    <p>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required>
+                    </p>
+                    <p>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="30" required></textarea>
+                    </p>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+        </main>
+
+        <hr>
+
+        <!-- Footer Section -->
+        <footer>
+            <center>
+                <p>&copy; 2026 Gian Papa. All rights reserved.</p>
+            </center>
+        </footer>
+
+    </div>
+
+</body>
+</html>

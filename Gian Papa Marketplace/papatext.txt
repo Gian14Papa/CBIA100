@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gian's Flowershop - Marketplace</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Dark Green Header Bar -->
+    <header>
+        <div class="logo-title">
+            <span class="flower-icon">🌸</span> Gian's Flowershop
+        </div>
+        <nav class="nav-links">
+            <a href="#products">Products</a> | 
+            <a href="#about">About Us</a> | 
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Main Section Title -->
+        <h2 class="section-title">Our Floral Arrangements</h2>
+
+        <!-- Centered White Container Grid -->
+        <div id="products" class="products-container">
+            
+            <!-- Card 1 -->
+            <div class="product-card">
+                <img src="photo 1.avif" alt="Pink Roses Bouquet" class="product-img">
+                <h3>Pink Roses Bouquet</h3>
+                <p class="description">Fresh pink garden rose arrangement.</p>
+                <p class="price">₱1,500</p>
+                <button type="button" class="buy-btn">Buy Now</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="product-card">
+                <img src="photo 2.avif" alt="Elegance Pink Iris" class="product-img">
+                <h3>Elegance Pink Iris</h3>
+                <p class="description">Single stem graceful pink iris flower.</p>
+                <p class="price">₱850</p>
+                <button type="button" class="buy-btn">Buy Now</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="product-card">
+                <img src="photo 3.avif" alt="Pink Tulip Bloom" class="product-img">
+                <h3>Pink Tulip Bloom</h3>
+                <p class="description">Vibrant pink single tulip stem.</p>
+                <p class="price">₱1,100</p>
+                <button type="button" class="buy-btn">Buy Now</button>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="product-card">
+                <img src="photo 4.avif" alt="Golden Sunflower Field" class="product-img">
+                <h3>Golden Sunflower</h3>
+                <p class="description">Bright and cheerful golden sunflower.</p>
+                <p class="price">₱1,200</p>
+                <button type="button" class="buy-btn">Buy Now</button>
+            </div>
+
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="info-section">
+            <h2>About Us</h2>
+            <p>Welcome to <b>Gian's Flowershop</b>! We curate fresh, beautifully arranged blooms for anniversaries, celebrations, and everyday occasions across the Philippines[cite: 5].</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="info-section">
+            <h2>Contact Us</h2>
+            <p>Email: order@giansflowershop.com | Phone: 09672590626</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Gian's Flowershop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
